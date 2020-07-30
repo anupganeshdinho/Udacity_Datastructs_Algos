@@ -1,0 +1,33 @@
+This file provides a run time analysis (Worst-Case Big-O Notation) for each solution for the problem.
+
+Task 0 : 
+This takes O(1) as we exactly know what we are looking for i.e., first record and last record in the whole list.
+
+Task1 : 
+This takes O(n) as we have to traverse through the entire list to find all the different telephone numbers present.
+Please note that we have to do this twice for caller and reciver so actual is 2n plus we have a set command which has O(1) but will be rounded off to O(n)
+
+Task2:
+This takes 0(n) , there are 3 linear loops here in total so actual n+n+n = 3n but can be rounded off to O(n)
+--> Traverse through all callers --> Caller time
+--> Traverse through all receiver --> Receiver time
+--> Find max in the above 2 combined which is saved in 1 dictionary.
+
+Task3:
+This takes O(nlogn) in total , Part A. O(nlogn), Part B. O(n) , below is the breakdown
+--> first find all calls from bangalore and divide into fixed lines, mobile , telemarketers -- O(n) as we traverse through the set of data once
+--> convert the above list to set i.e., non repeating O(1) 
+--> Print them in sorted which has complexity of O(nlogn) to sort and O(n) to print one by one.
+--> So total is  O(n) + O(n) + O(nlogn) + O(1) = approximated to O(nlogn) for Part A
+--> Part B  --> Traverse through once to count number of calls O(n) , percentage calculation is O(1) so total approximated is O(n)
+
+Task4:
+This takes O(nlogn) after taking everything into account, breakdown below
+--> 4 loops to traverse through caller, receiver , text sender and receiver O(n+n+n+n) = O(4n) approximated to O(n)
+--> 1 more loop to find if the caller didnt receive any texts or calls and didnt send any texts = O(n)
+--> Sorting = O(nlogn)
+--> Print = O(n) 
+--> Adding altogether and approximating we get O(nlogn)
+
+
+
